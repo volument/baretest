@@ -1,8 +1,8 @@
 {
   "name": "baretest",
   "description": "Mimimal test lib for JS generator functions",
+  "main": "lib/baretest",
   "version": "0.0.1",
-  "main": "baretest",
   "private": true,
 
   "repository": {
@@ -11,8 +11,7 @@
   },
 
   "dependencies": {
-    "co": "latest",
-    "debug": "latest"
+    "co": "latest"
   },
 
   "engines": { "iojs": "latest" }

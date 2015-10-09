@@ -1,7 +1,9 @@
 
-## Mimimal test lib for JS generator functions
+## Mimimal testing for JavaScript generator functions
+98% smaller than Mocha, faster startup, designed to `yield`, beautiful output
 
-I hate you. Why do we possibly need another test library, for christ sake!
+> Why do we possibly need another test library, for christ sake! I hate you.
+
 
 - 98% smaller codebase, 50% faster startup
 - only what you want: test, test.only, test.before
