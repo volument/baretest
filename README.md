@@ -5,11 +5,13 @@
 > Why do we possibly need another test library, for christ sake! I hate you.
 
 
-- 98% smaller codebase, 50% faster startup
-- only what you want: test, test.only, test.before
+- yield is a different beast, demands a new approach
 - ridiculously small, easy to gasp, trivial to contribute
-- output based on the standard `debug` libr
-- require('assert') is your friend
+- only what you want: test(), test.only(), test.before()
+- output based on the standard `debug` library
+- the node- native `require('assert')` is your friend
+- 98% smaller codebase (no kidding), 50%-80% faster startup
+- no dependencies
 
 
 

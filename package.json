@@ -10,10 +10,8 @@
     "type": "git"
   },
 
-  "dependencies": {
+  "devDependencies": {
     "co": "latest"
-  },
-
-  "engines": { "iojs": "latest" }
+  }
 
 }
