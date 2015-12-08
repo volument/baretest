@@ -28,5 +28,14 @@ test('create new site', function* () {})
 test.only('this here', function* () { })
 
 // run tests
-test()
+yield test.run()
+```
+
+
+### Running multiple tests
+
+``` javascript
+var baretest = require('baretest')
+
+yield baretest.run(['server/tests', 'user/tests'])
 ```
