@@ -37,5 +37,5 @@ yield test.run()
 ``` javascript
 var baretest = require('baretest')
 
-yield baretest.run(['server/tests', 'user/tests'])
+yield baretest.runAll('server/tests', 'user/tests')
 ```
