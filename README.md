@@ -10,8 +10,11 @@
 - only what you want: test(), test.only(), test.before()
 - output based on the standard `debug` library
 - the node- native `require('assert')` is your friend
-- 98% smaller codebase (no kidding), 50%-80% faster startup
-- no dependencies
+- 98% smaller codebase (no kidding)
+
+- 500% faster require('') & the importance of require time when testing
+    - require time comparison
+    - amount of dependencies
 
 
 

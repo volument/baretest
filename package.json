@@ -6,15 +6,16 @@
   "private": true,
 
   "repository": {
-    "url": "https://bitbucket.org/bareapp/baretest",
+    "url": "https://bitbucket.org/futusite/baretest",
     "type": "git"
   },
 
   "scripts": {
-    "test": "node test/suite"
+    "test": "node test/a"
   },
 
-  "devDependencies": {
+  "dependencies": {
+    "rgb": "latest",
     "co": "latest"
   }
 
