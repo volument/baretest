@@ -6,12 +6,13 @@
   "private": true,
 
   "repository": {
-    "url": "https://bitbucket.org/futusite/baretest",
+    "url": "https://bitbucket.org/volument/baretest",
     "type": "git"
   },
 
   "scripts": {
-    "test": "node test/a"
+    "test": "node test/random",
+    "_test": "node test/a"
   },
 
   "dependencies": {
