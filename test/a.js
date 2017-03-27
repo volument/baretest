@@ -1,6 +1,9 @@
-var test = require('..')('A')
+const test = module.exports = require('..')('A')
 
-test('A 1', function* () {})
-test('A 2', function* () {})
+test('A 1', async function() {
+  // console.info('joo')
+})
+test('A 2', async function() {
+  // console.info('joo')
+})
 
-test.yield()

@@ -11,13 +11,12 @@
   },
 
   "scripts": {
-    "test": "node test/random",
-    "_test": "node test/a"
+    "_test": "node test/random",
+    "test": "node test/suite"
   },
 
   "dependencies": {
-    "rgb": "latest",
-    "co": "latest"
+    "rgb": "latest"
   }
 
 }
