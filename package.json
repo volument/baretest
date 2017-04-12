@@ -1,9 +1,18 @@
+
 {
   "name": "baretest",
-  "description": "Mimimal test lib for JS generator functions",
-  "main": "lib/baretest",
-  "version": "0.0.1",
-  "private": true,
+  "description": "Extremely fast and simple JavaScript test runner",
+
+  "keywords": [
+    "jest", "mocha", "tap", "tape", "tdd", "bdd", "node", "test",
+    "test-runner", "test-framework", "testing-tool"
+  ],
+
+  "logo": "https://volument.com/blog/img/baretest/logomark-big.png",
+  "homepage": "https://volument.com/baretest",
+  "main": "baretest",
+  "version": "1.0.0",
+  "license": "MIT",
 
   "repository": {
     "url": "https://bitbucket.org/volument/baretest",
@@ -11,12 +20,10 @@
   },
 
   "scripts": {
-    "_test": "node test/random",
-    "test": "node test/suite"
+    "test": "node test"
   },
 
   "dependencies": {
-    "rgb": "latest"
+    "barecolor": "1.0.1"
   }
-
 }

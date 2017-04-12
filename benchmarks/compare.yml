@@ -1,0 +1,211 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: bash -l
+
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/tipiirai/Volument/tools/baretest/benchmarks
+
+  # Export additional ENV variables
+  env:
+    recording: true
+
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 55
+
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 10
+
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+
+  # Quality
+  # 1 - 100
+  quality: 60
+
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: solid
+    title: null
+    style:
+      margin: 0px
+      # border: 0px black solid
+      # boxShadow: none
+
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Lucida Console, Ubuntu Mono, Monospace"
+
+  # The size of the font
+  fontSize: 13
+
+  # The height of lines
+  lineHeight: 1.5
+
+  # The spacing between letters
+  letterSpacing: 0
+
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+
+# Records, feel free to edit them
+records:
+  - delay: 1000
+    content: "\e]7;file://Dieter/Users/tipiirai/Volument/tools/baretest/benchmarks\a\e[?1034hcompare$ "
+  - delay: 846
+    content: t
+  - delay: 100
+    content: i
+  - delay: 52
+    content: m
+  - delay: 100
+    content: e
+  - delay: 157
+    content: ' '
+  - delay: 172
+    content: 'n'
+  - delay: 68
+    content: o
+  - delay: 84
+    content: d
+  - delay: 178
+    content: e
+  - delay: 563
+    content: ' '
+  - delay: 268
+    content: e
+  - delay: 117
+    content: s
+  - delay: 668
+    content: "\b\e[K"
+  - delay: 151
+    content: "\b\e[K"
+  - delay: 225
+    content: j
+  - delay: 76
+    content: e
+  - delay: 115
+    content: s
+  - delay: 177
+    content: t
+  - delay: 138
+    content: "\r\n"
+  - delay: 1747
+    content: "\e[1m\e[2mDetermining test suites to run...\e[22m\e[22m"
+  - delay: 74
+    content: "\e[999D\e[K\r\n\r\e[K\r\e[1A"
+  - delay: 8
+    content: "\r\n\e[0m\e[7m\e[33m\e[1m RUNS \e[22m\e[39m\e[27m\e[0m \e[2m./\e[22m\e[1mjest.test.js\e[22m\r\n"
+  - delay: 1937
+    content: "\r\e[K\r\e[1A\r\e[K\r\e[1A\e[0m\e[7m\e[1m\e[32m PASS \e[39m\e[22m\e[27m\e[0m \e[2m./\e[22m\e[1mjest.test.js\e[22m\r\n\r\n\e[0m\e[7m\e[33m\e[1m RUNS \e[22m\e[39m\e[27m\e[0m \e[2m./\e[22m\e[1mjest.test.js\e[22m\r\n"
+  - delay: 7
+    content: "\r\e[K\r\e[1A\r\e[K\r\e[1A  \e[32m✓\e[39m \e[2madds 1 + 2 to equal 3 (3ms)\e[22m\r\n\r\n\e[0m\e[7m\e[33m\e[1m RUNS \e[22m\e[39m\e[27m\e[0m \e[2m./\e[22m\e[1mjest.test.js\e[22m\r\n\r\e[K\r\e[1A\r\e[K\r\e[1A\r\n\r\n\e[0m\e[7m\e[33m\e[1m RUNS \e[22m\e[39m\e[27m\e[0m \e[2m./\e[22m\e[1mjest.test.js\e[22m\r\n\r\e[K\r\e[1A\r\e[K\r\e[1A\r\n\e[0m\e[7m\e[33m\e[1m RUNS \e[22m\e[39m\e[27m\e[0m \e[2m./\e[22m\e[1mjest.test.js\e[22m\r\n\r\e[K\r\e[1A\r\e[K\r\e[1A\e[999D\e[K\e[1mTest Suites: \e[22m\e[1m\e[32m1 passed\e[39m\e[22m, 1 total\r\n\e[1mTests:       \e[22m\e[1m\e[32m1 passed\e[39m\e[22m, 1 total\r\n\e[1mSnapshots:   \e[22m0 total\r\n\e[1mTime:\e[22m        1.982s\r\n\e[2mRan all test suites\e[22m\e[2m.\e[22m\r\n"
+  - delay: 40
+    content: "\r\nreal\t0m3.840s\r\nuser\t0m2.374s\r\nsys\t0m0.916s\r\n"
+  - delay: 17
+    content: "\e]7;file://Dieter/Users/tipiirai/Volument/tools/baretest/benchmarks\acompare$ "
+  - delay: 2000
+    content: t
+  - delay: 83
+    content: i
+  - delay: 40
+    content: m
+  - delay: 88
+    content: e
+  - delay: 207
+    content: ' '
+  - delay: 253
+    content: 'n'
+  - delay: 84
+    content: o
+  - delay: 80
+    content: d
+  - delay: 152
+    content: e
+  - delay: 521
+    content: ' '
+  - delay: 208
+    content: b
+  - delay: 104
+    content: a
+  - delay: 253
+    content: r
+  - delay: 92
+    content: e
+  - delay: 241
+    content: t
+  - delay: 48
+    content: e
+  - delay: 165
+    content: s
+  - delay: 68
+    content: t
+  - delay: 543
+    content: "\r\n"
+  - delay: 86
+    content: "\e[36msum \e[39m\e[90m• \e[39m\e[32m✓ 1\r\n\e[39m\r\n\r\n"
+  - delay: 6
+    content: "\r\nreal\t0m0.094s\r\nuser\t0m0.067s\r\nsys\t0m0.021s\r\n\e]7;file://Dieter/Users/tipiirai/Volument/tools/baretest/benchmarks\acompare$ "
+  - delay: 3000
+    content: ' '
