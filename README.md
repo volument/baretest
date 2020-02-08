@@ -46,7 +46,7 @@ const test = require('baretest')('My app'),
 
 test('add user', async function() {
   const user = await app.addUser('test@cc.com')
-  assert.equals(user.name, 'Test')
+  assert.equal(user.name, 'Test')
 })
 
 test('reject duplicate emails', async function() {
