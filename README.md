@@ -40,7 +40,7 @@ Another reason for building Baretest was to have an extremely simple API. Typica
 
 
 ``` javascript
-const test = require('baretest'),
+const test = require('baretest')('My app'),
   assert = require('assert'),
   app = require('my-app')
 
@@ -56,6 +56,10 @@ test('reject duplicate emails', async function() {
 })
 
 // ...
+
+!(async function() {
+  await test.run()
+})()
 ```
 
 We think a good test runner stays out of your way. We want to focus on the task at hand and not deal with the complexities of testing. We don't want to commit to a massive framework that dictates our work.
