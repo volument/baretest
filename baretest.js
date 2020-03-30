@@ -42,6 +42,7 @@ module.exports = function(headline) {
     for (const fn of after) await fn()
     rgb.greenln(`✓ ${ tests.length }`)
     console.info('\n')
+    return true
   }
 
   return self
