@@ -19,7 +19,6 @@ module.exports = function(headline) {
   self.after = function(fn) { after.push(fn)  }
   self.skip = function(fn) {}
 
-  // for testing Baretest
   self.run = async function() {
     const tests = only[0] ? only : suite
 
