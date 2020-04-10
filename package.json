@@ -10,14 +10,10 @@
 
   "logo": "https://volument.com/blog/img/baretest/logomark-big.png",
   "homepage": "https://volument.com/baretest",
+  "repository": "volument/baretest",
   "main": "baretest",
   "version": "1.0.0",
   "license": "MIT",
-
-  "repository": {
-    "url": "https://bitbucket.org/volument/baretest",
-    "type": "git"
-  },
 
   "scripts": {
     "test": "node test"
