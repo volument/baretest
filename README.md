@@ -71,6 +71,10 @@ test('another test in group', async function() {
 // you can make your test output more verbose by setting quiet to false
 test.quiet(false) // default is true, which has concise output
 
+// you can output TAP compliant test runs if you want to use a TAP formatter
+test.tap(true) // default is false
+
+
 !(async function() {
   await test.run()
 })()
