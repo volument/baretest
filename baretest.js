@@ -7,6 +7,8 @@ module.exports = function(headline) {
     after = [],
     only = []
 
+  let quiet = true
+
   function self(name, fn) {
     suite.push({ name: name, fn: fn })
   }
@@ -19,27 +21,54 @@ module.exports = function(headline) {
   self.after = function(fn) { after.push(fn)  }
   self.skip = function(fn) {}
 
+  self.group = function(name) {
+    suite.push({ group: name })
+  }
+
+  self.quiet = function(_quiet) {
+    quiet = _quiet
+  }
+
   self.run = async function() {
     const tests = only[0] ? only : suite
 
-    rgb.cyan(headline + ' ')
+    rgb.cyan(headline + '\n')
 
     for (const test of tests) {
+      if (test.group) {
+        rgb.cyan(`${ quiet ? '\n' : '' }  ${ test.group }${ quiet ? ' ' : '\n' }`)
+        continue
+      }
+
       try {
         for (const fn of before) await fn()
         await test.fn()
-        rgb.gray('• ')
+        if (quiet) {
+          rgb.gray('• ')
+        }
+        else {
+          rgb.gray(`    ${ test.name } `)
+        }
 
       } catch(e) {
         for (const fn of after) await fn()
-        rgb.red(`\n\n! ${test.name} \n\n`)
+        if (quiet) {
+          rgb.red(`\n\n! ${test.name} \n\n`)
+        }
+        else {
+          rgb.redln('✘')
+        }
         prettyError(e)
         return false
+      }
+
+      if (!quiet) {
+        rgb.greenln('✓')
       }
     }
 
     for (const fn of after) await fn()
-    rgb.greenln(`✓ ${ tests.length }`)
+    rgb.greenln(`\n✓ ${ tests.filter( test => typeof test.group === 'undefined' ).length }`)
     console.info('\n')
     return true
   }
@@ -57,4 +86,3 @@ function prettyError(e) {
   rgb.yellowln(msg.slice(0, i))
   rgb.gray(msg.slice(i))
 }
-

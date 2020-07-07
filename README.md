@@ -55,7 +55,21 @@ test('reject duplicate emails', async function() {
   })
 })
 
+// you can group tests together in the output if you'd like
+test.group('test group')
+
+test('first test in group', async function() {
+  assert.equals(true, true)
+})
+
+test('another test in group', async function() {
+  assert.equals(true, true)
+})
+
 // ...
+
+// you can make your test output more verbose by setting quiet to false
+test.quiet(false) // default is true, which has concise output
 
 !(async function() {
   await test.run()
