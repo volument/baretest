@@ -60,8 +60,6 @@ module.exports = function(headline) {
           passed: true
         });
       } catch(e) {
-        for (const fn of after) await fn()
-
         emit({
           count,
           test,
@@ -70,6 +68,8 @@ module.exports = function(headline) {
         })
 
         if (bail) {
+          for (const fn of after) await fn()
+
           if (tap) {
             console.log('Bail out!')
           }
