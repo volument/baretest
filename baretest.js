@@ -11,7 +11,11 @@ module.exports = function(headline) {
     quiet = true,
     tap = false,
     count = 0,
-    passed = true
+    passed = true,
+    results = {
+      passed: 0,
+      failed: 0
+    }
 
   function self(name, fn) {
     suite.push({ name: name, fn: fn })
@@ -59,6 +63,7 @@ module.exports = function(headline) {
           test,
           passed: true
         });
+        ++results.passed;
       } catch(e) {
         emit({
           count,
@@ -67,6 +72,7 @@ module.exports = function(headline) {
           e
         })
 
+        ++results.failed;
         if (bail) {
           for (const fn of after) await fn()
 
@@ -82,7 +88,8 @@ module.exports = function(headline) {
 
     for (const fn of after) await fn()
     if (!tap) {
-      rgb.greenln(`\n✓ ${ tests.filter( test => typeof test.group === 'undefined' ).length }`)
+      rgb.green(`\n✓ ${ results.passed }`)
+      rgb.red(` ✘ ${ results.failed }`)
     }
     console.info('\n')
     return passed
