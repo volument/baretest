@@ -34,6 +34,7 @@ module.exports = function(headline) {
         for (const fn of after) await fn()
         rgb.red(`\n\n! ${test.name} \n\n`)
         prettyError(e)
+        process.exitCode = 1
         return false
       }
     }
