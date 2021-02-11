@@ -34,13 +34,13 @@ module.exports = function(headline) {
         for (const fn of after) await fn()
         rgb.red(`\n\n! ${test.name} \n\n`)
         prettyError(e)
+        console.info()
         return false
       }
     }
 
     for (const fn of after) await fn()
     rgb.greenln(`✓ ${ tests.length }`)
-    console.info('\n')
     return true
   }
 
@@ -55,6 +55,6 @@ function prettyError(e) {
 
   const i = msg.indexOf('\n')
   rgb.yellowln(msg.slice(0, i))
-  rgb.gray(msg.slice(i))
+  rgb.gray(msg.slice(i + 1))
 }
 
