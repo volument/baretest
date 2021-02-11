@@ -55,6 +55,6 @@ function prettyError(e) {
 
   const i = msg.indexOf('\n')
   rgb.yellowln(msg.slice(0, i))
-  rgb.gray(msg.slice(i))
+  rgb.gray(msg.slice(i + 1))
 }
 
